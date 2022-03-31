@@ -2,7 +2,7 @@
 <h1>Notes</h1>
 
 {% for note in notes %}
-<a href="">
+<a href="{% url 'note_detail' note.id %}">
   <p>Title: {{note.title}}</p>
   <p>Text: {{note.text}}</p>
 </a>
