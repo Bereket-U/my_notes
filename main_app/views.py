@@ -10,7 +10,7 @@ def home (request):
     notes = Note.objects.all()
     return  render(request, 'home.html', {'notes': notes})
 
-class NoteCteate(CreateView):
+class note_create(CreateView):
     model = Note
     fields = ['title', 'text']
     success_url = '/'
