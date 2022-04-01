@@ -14,3 +14,7 @@ class note_create(CreateView):
     model = Note
     fields = ['title', 'text']
     success_url = '/'
+
+def note_detail (request, note_id):
+    note = Note.objects.get(id = note_id)
+    return  render(request, 'detail.html', {'note': note})
